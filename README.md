@@ -22,14 +22,14 @@ rm -r /home/user/.local/share/webapp/Agenda /home/user/.local/share/applications
 ```
 
 ```bash
-(venv) [user@linux]$ python3 mozapp.py Skype https://web.skype.com/ call-start
-Success! Try searching for 'Skype'.
+(venv) [user@linux]$ python3 mozapp.py Spotify https://web.Spotify.com/ call-start
+Success! Try searching for 'Spotify'.
 
 List of installed apps (and also the commands to de-install them):
 rm -r /home/user/.local/share/webapp/WhatsApp /home/user/.local/share/applications/webapp-WhatsApp.desktop
 rm -r /home/user/.local/share/webapp/Agenda /home/user/.local/share/applications/webapp-Agenda.desktop
-rm -r /home/user/.local/share/webapp/Skype /home/user/.local/share/applications/webapp-Skype.desktop
-(venv) [user@linux]$ rm -r /home/user/.local/share/webapp/Skype /home/user/.local/share/applications/webapp-Skype.desktop
+rm -r /home/user/.local/share/webapp/Spotify /home/user/.local/share/applications/webapp-Spotify.desktop
+(venv) [user@linux]$ rm -r /home/user/.local/share/webapp/Spotify /home/user/.local/share/applications/webapp-Spotify.desktop
 (venv) [user@linux]$
 ```
 
