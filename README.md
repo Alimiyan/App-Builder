@@ -1,27 +1,31 @@
 forgeon
 ======
 
-Do you prefer Firefox to Chrome? Me too! But ever since Firefox dropped support
-for standalone web applications, I've resorted to using Chrome for those.
-Better than installing a bloated Electron app, but not ideal.
+Bring Back Standalone Web Apps to Firefox (For Now!)
 
-This is my best attempt at fixing the situation. Tested only using Firefox 96
-and Gnome 3 on both Wayland and X11. It's a 100 line commented and
-straightforward Python script.
+Firefox fans, rejoice! This Python script (tested with Firefox 96-124 and Gnome 3,4 on Wayland/X11) aims to restore the functionality of standalone web apps, a feature dearly missed by many.
 
-![Screenshot of Github made into a borderless WebApp](forgeon.png)
+Fed up with Electron apps? Us too. This lightweight script offers a streamlined alternative to bloated Electron frameworks.
+
+Here's what you get:
+
+Standalone web app experience: Launch your favorite web apps as independent windows, replicating the pre-deprecation behavior.
+Simple setup: Easy-to-understand Python code with clear comments makes customization a breeze.
+Cross-environment compatibility (work in progress): Tested successfully on both Wayland and X11 for broader usability.
+Current Limitations (Let's collaborate!):
+
+This is a work in progress. Your contributions and ideas are invaluable in making it better!
+Let's revive the standalone web app experience in Firefox!
 
 Usage
 -----
 
-```bash
-(venv) [user@linux forgeon]$ python3 forgeon.py
-Usage: python3 forgeon.py Example https://example.com optional-icon-name
+Clone this repository: git clone https://github.com/Alimiyan/App-Builder.git
+Navigate to the project directory: cd App-Builder
+Run the script: python forgeon.py
+Feel free to report issues, suggest improvements, or contribute code!
 
-List of installed apps (and also the commands to de-install them):
-rm -r /home/user/.local/share/webapp/WhatsApp /home/user/.local/share/applications/webapp-WhatsApp.desktop
-rm -r /home/user/.local/share/webapp/Agenda /home/user/.local/share/applications/webapp-Agenda.desktop
-```
+![Screenshot of Github made into a borderless WebApp](forgeon.png)
 
 ```bash
 (venv) [user@linux forgeon]$ python3 forgeon.py Skype https://web.skype.com/ call-start
@@ -35,8 +39,21 @@ rm -r /home/user/.local/share/webapp/Skype /home/user/.local/share/applications/
 (venv) [user@linux forgeon]$
 ```
 
-If you specify an icon name as third argument, it is used as-is in the
-resulting ``.desktop`` file. If you don't, ``forgeon`` will try to download
-the biggest icon given by the web application (it visits the web app). In
-that case, you need to have the ``favicon`` Python package installed from
-PyPI (e.g. using ``pip install favicon``).
+Icon Options:
+
+There are two ways to set the icon for the generated .desktop file:
+
+Provide an Icon Name:
+
+Pass the desired icon name as the third argument to forgeon.
+This name will be used directly in the .desktop file.
+Example: forgeon https://example.com "My Web App" my_app.desktop
+Automatic Download (Requires favicon package):
+
+If you don't specify an icon name, forgeon will attempt to download the largest icon offered by the web application.
+To enable this feature, you need to have the favicon Python package installed (pip install favicon).
+Note: This approach requires internet access and might not always work due to website restrictions.
+Choosing the Right Method:
+
+If you have a specific icon in mind, providing the name directly offers more control.
+If you prefer automatic download and have favicon installed, it's a convenient option, but keep in mind its limitations.
