@@ -176,7 +176,7 @@ def main():
         # default icon_name to None
         name, url, icon_name, *_ = sys.argv[1:] + [None]
     except ValueError:
-        print("Usage: python3 mozapp.py Example https://example.com optional-icon-name")
+        print("Usage: python3 forgeon.py Example https://example.com optional-icon-name")
     else:
         # create a webapp
         create_app(name, url, icon_name)
