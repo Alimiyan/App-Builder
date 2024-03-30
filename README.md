@@ -45,6 +45,8 @@ rm -r /home/user/.local/share/webapp/Skype /home/user/.local/share/applications/
 (venv) [user@linux forgeon]$ rm -r /home/user/.local/share/webapp/Skype /home/user/.local/share/applications/webapp-Skype.desktop
 ```
 
+![Screenshot of Github made into a borderless WebApp](forgeon.png)
+
 ## Icon Options
 
 ### Provide an Icon Name
